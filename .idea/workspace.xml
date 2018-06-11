@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="980b065c-af60-4159-9255-aaa5abe4c6be" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/smallblog/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/smallblog/app/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/smallblog/app/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/smallblog/app/routes.py" beforeDir="false" afterPath="$PROJECT_DIR$/smallblog/app/routes.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/smallblog/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smallblog/app/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/smallblog/app/templates/base.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/smallblog/app/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/smallblog/app/templates/index.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -38,11 +36,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/smallblog/app/templates/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" column="12" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="12" />
+            <state relative-caret-position="45">
+              <caret line="3" column="14" selection-start-line="3" selection-start-column="14" selection-end-line="3" selection-end-column="14" />
             </state>
           </provider>
         </entry>
@@ -50,8 +48,8 @@
       <file leaf-file-name="base.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/smallblog/app/templates/base.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" column="16" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="16" />
+            <state>
+              <caret column="15" lean-forward="true" selection-start-column="15" selection-end-column="15" />
             </state>
           </provider>
         </entry>
@@ -60,16 +58,7 @@
         <entry file="file://$PROJECT_DIR$/smallblog/smallblog.py">
           <provider selected="true" editor-type-id="text-editor">
             <state>
-              <caret column="16" selection-start-column="16" selection-end-column="16" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/smallblog/.gitignore">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+              <caret column="14" selection-start-column="14" selection-end-column="14" />
             </state>
           </provider>
         </entry>
@@ -93,10 +82,10 @@
         <option value="$PROJECT_DIR$/smallblog/app/__init__.py" />
         <option value="$PROJECT_DIR$/smallblog/smallblog.py" />
         <option value="$PROJECT_DIR$/smallblog/app/routes.py" />
-        <option value="$PROJECT_DIR$/smallblog/app/templates/index.html" />
-        <option value="$PROJECT_DIR$/smallblog/app/templates/base.html" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/smallblog/.gitignore" />
+        <option value="$PROJECT_DIR$/smallblog/app/templates/base.html" />
+        <option value="$PROJECT_DIR$/smallblog/app/templates/index.html" />
       </list>
     </option>
   </component>
@@ -123,6 +112,17 @@
               <item name="gitproject1" type="b2602c69:ProjectViewProjectNode" />
               <item name="gitproject1" type="462c0819:PsiDirectoryNode" />
               <item name="smallblog" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="gitproject1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gitproject1" type="462c0819:PsiDirectoryNode" />
+              <item name="smallblog" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="gitproject1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gitproject1" type="462c0819:PsiDirectoryNode" />
+              <item name="venv" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -168,14 +168,14 @@
     <frame x="65" y="-4" width="1295" height="772" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Version Control" />
       <window_info anchor="bottom" id="Python Console" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info active="true" anchor="bottom" id="Terminal" visible="true" weight="0.33073324" />
+      <window_info anchor="bottom" id="Terminal" visible="true" weight="0.33073324" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info id="Favorites" side_tool="true" />
       <window_info anchor="bottom" id="Find" order="1" />
@@ -194,13 +194,6 @@
     <entry file="file://$PROJECT_DIR$/smallblog/.gitignore">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/smallblog/smallblog.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="16" selection-start-column="16" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/smallblog/app/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
@@ -218,24 +211,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/smallblog/app/templates/index.html">
+    <entry file="file://$PROJECT_DIR$/smallblog/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="12" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="12" />
+        <state relative-caret-position="90">
+          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/smallblog/smallblog.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="14" selection-start-column="14" selection-end-column="14" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/smallblog/app/templates/base.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="16" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="16" />
+        <state>
+          <caret column="15" lean-forward="true" selection-start-column="15" selection-end-column="15" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/smallblog/.gitignore">
+    <entry file="file://$PROJECT_DIR$/smallblog/app/templates/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+        <state relative-caret-position="45">
+          <caret line="3" column="14" selection-start-line="3" selection-start-column="14" selection-end-line="3" selection-end-column="14" />
         </state>
       </provider>
     </entry>

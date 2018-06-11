@@ -1,17 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    {% if title %}
-    <title>{{title}}-Smallblog</title>
+{% extends "base.html" %}
 
-    {% else %}
-    <title>Welcome to Smallblog</title>
-
-    {% endif %}
-
-</head>
-<body>
+{% block content %}
         <h1>Hello,{{user.username}}</h1>
-</body>
-</html>
+{% endblock %}

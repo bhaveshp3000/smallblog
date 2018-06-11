@@ -2,9 +2,21 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+
+    {% if title %}
+    <title>{{title}}-Smallblog</title>
+
+    {% else %}
+    <title>Welcome to Smallblog</title>
+
+    {% endif %}
+
 </head>
 <body>
-
+    <div>
+        SmallBlog:<a href="/index">Home</a>
+    </div>
+    <hr>
+    {% block content %}{% endblock %}
 </body>
 </html>
