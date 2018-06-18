@@ -3,8 +3,13 @@ from app import db
 from flask import render_template, redirect, flash, url_for, request
 from app.forms import LoginForm, RegistrationForm
 from flask_login import current_user, login_user, logout_user, login_required
-from app.models import User
+from app.models import User,OAuth
 from werkzeug.urls import url_parse
+from app import github_blueprint,make_github_blueprint,github
+from flask_dance.consumer import oauth_authorized
+from flask_dance.consumer.backend.sqla import SQLAlchemyBackend
+from sqlalchemy.orm.exc import NoResultFound
+
 
 
 
@@ -57,3 +62,35 @@ def register():
         flash('Congratulations, you are now a registered user!')
         return redirect(url_for('login'))
     return render_template('register.html', title='Register', form=form)
+
+
+@app.route('/github')
+def github_login():
+    if not github.authorized:
+        return redirect(url_for('github.login'))
+    resp = github.get("/user")
+    assert resp.ok
+    return "You are @{login} on GitHub".format(login=resp.json()["login"])
+
+github_blueprint.backend = SQLAlchemyBackend(OAuth,db.session,user=current_user)
+
+@oauth_authorized.connected_to(github_blueprint)
+def github_logged_in(blueprint,token):
+
+    resp = blueprint.session.get('/user')
+
+    if resp.ok:
+        resp_json = resp.json()
+        username = resp_json['login']
+
+        query = User.query.filter_by(username=username)
+
+        try:
+            user = query.one()
+
+        except NoResultFound:
+            user = User(username=username)
+            db.session.add(user)
+            db.session.commit()
+
+        logout_user(user)
