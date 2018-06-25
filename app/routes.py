@@ -3,7 +3,7 @@ from app import db
 from flask import render_template, redirect, flash, url_for, request
 from app.forms import LoginForm, RegistrationForm
 from flask_login import current_user, login_user, logout_user, login_required
-from app.models import User,S_User
+from app.models import User
 from werkzeug.urls import url_parse
 from oauth import OAuthSignIn
 
@@ -75,9 +75,9 @@ def oauth_callback(provider):
     if social_id is None:
         flash('Authentication failed.')
         return redirect(url_for('login'))
-    user = S_User.query.filter_by(social_id=social_id).first()
+    user = User.query.filter_by(social_id=social_id).first()
     if not user:
-        user = S_User(social_id=social_id, nickname=username, email=email)
+        user = User(social_id=social_id, nickname=username, email=email)
         db.session.add(user)
         db.session.commit()
     login_user(user, True)
